@@ -1,11 +1,19 @@
 {
   "name": "ihealthplugin",
   "version": "1.0.0",
-  "description": "Cordova plugin wrapper for iHealth SDK.",
-  "main": "iHealthPlugin.js",
+  "description": "Cordova and Capacitor plugin wrapper for iHealth SDK.",
+  "main": "www/iHealthPlugin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ivan-Lee Zamora",
-  "license": "ISC"
+  "license": "ISC",
+  "cordova": {
+    "id": "cordova-ihealth-plugin",
+    "platforms": ["android"]
+  },
+  "capacitor": {
+    "platforms": ["android"]
+  },
+  "files": ["www", "src", "plugin.xml", "android"]
 }
