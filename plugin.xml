@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-ihealth-plugin" version="1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+<plugin id="cordova-ihealth-plugin" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>iHealthPlugin</name>
     <js-module name="iHealthPlugin" src="www/iHealthPlugin.js">
@@ -11,11 +12,9 @@
                 <param name="android-package" value="cordova.ihealth.plugin.iHealthPlugin" />
             </feature>
         </config-file>
-        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <source-file src="src/android/iHealthPlugin.java"
-            target-dir="src/cordova-ihealth-plugin/iHealthPlugin" />
+        <source-file src="src/android/iHealthPlugin.java" target-dir="src/cordova/ihealth/plugin" />
         <lib-file src="src/android/libs/iHealthSDK_2.16.0.jar" />
         <resource-file src="src/android/certificates/com_guardian_android_patient_dev_android.pem"
             target="assets/com_guardian_android_patient_dev_android.pem" />
     </platform>
-</plugin> 
+</plugin>
