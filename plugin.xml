@@ -14,5 +14,8 @@
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/iHealthPlugin.java"
             target-dir="src/cordova-ihealth-plugin/iHealthPlugin" />
+        <lib-file src="src/android/libs/iHealthSDK_2.16.0.jar" />
+        <resource-file src="src/android/certificates/com_guardian_android_patient_dev_android.pem"
+            target="assets/com_guardian_android_patient_dev_android.pem" />
     </platform>
-</plugin>
+</plugin> 
