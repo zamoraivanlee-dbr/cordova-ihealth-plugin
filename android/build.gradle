@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'cordova.ihealth.plugin'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 34
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs += ['src/main/assets', '../src/android/certificates']
+        }
+    }
+}
+
+dependencies {
+    implementation files('../src/android/libs/iHealthSDK_2.16.0.jar')
+    implementation 'com.getcapacitor:android:4.8.0'
+}

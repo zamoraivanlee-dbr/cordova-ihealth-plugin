@@ -24,7 +24,7 @@ public class iHealthPlugin extends CordovaPlugin {
                 return true;
             case "checkAuthorization":
                 boolean isAuthorized = checkAuthorization();
-                callbackContext.success(isAuthorized ? 1 : 0);
+                callbackContext.sendPluginResult(new org.apache.cordova.PluginResult(org.apache.cordova.PluginResult.Status.OK, isAuthorized));
                 return true;
             default:
                 return false;
